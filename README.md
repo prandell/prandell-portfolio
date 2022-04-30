@@ -1,46 +1,67 @@
-# Getting Started with Create React App
+# Personal Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is my personal portfolio, which showcases my projects and experiences. It is also itself, a showcase of my personal style and interests. I hope you like it!
 
-## Available Scripts
+## General Information
 
-In the project directory, you can run:
+I borrowed conepts from XYZ
 
-### `npm start`
+## Table of Contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [Personal Portfolio](#Personal-Portfolio)
+  - [General Information](#general-information)
+  - [Table of Contents](#table-of-contents)
+  - [Technology Used](#technology-used)
+  - [Setup](#setup)
+    - [Run](#run)
+    - [Build](#build)
+  - [Acknowledgements](#acknowledgements)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Technology Used
 
-### `npm test`
+Notable technologies are `React@18`, `Recoil`, `ThreeJs`, `Typescript`, `StyledComponents@5`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- `react`: ^18.0.0
+- `typescript`: ^4.6.3
+- `react-dom`: ^18.0.0
+- `redux-logger`: ^3.0.6
+- `web-vitals`: ^2.1.4
+- `styled-components`: ^5.3.5
+- `react-scripts`: 5.0.0
+- `@types/node`: ^16.11.26
+- `@types/react`: ^18.0.5
+- `@types/react-dom`: ^18.0.1
+- `@types/styled-components`: ^5.1.25
+- `@types/jest`: ^27.4.1
+- `testing-library/jest-dom`: ^5.16.3
+- `testing-library/react`: ^12.1.4
+- `testing-library/user-event`: ^13.5.0
 
-### `npm run build`
+## Setup
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+You must have node installed!
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Run
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+cd ./personal-portfolio
+npm install
+npm run start
+```
 
-### `npm run eject`
+This will then launch the application within the native web browser on your computer.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Build
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+cd ./personal-portfolio
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+npm install
+npm run build
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Acknowledgements
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [CSS Grid Guide](https://css-tricks.com/snippets/css/complete-guide-grid/)
+- [Create React App](https://github.com/facebook/create-react-app).
+- [Recoil](https://recoiljs.org/)
