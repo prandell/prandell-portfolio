@@ -27,21 +27,28 @@ export const GlobalStyle = createGlobalStyle`
   --accent-colour-3: ${palette.themeDark.deepPurple};
 }
 
+html, 
+#root {
+}
+
 body {
-  height: 100%;
   background-color: var(--background-colour);
   margin: 0;
-  color: var(--text-colour);
+  color: var(--primary-text-colour);
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 .app {
-  height: 100%;
+  height: 100vh;
   background-color: var(--background-colour);
-  padding: 20px 40px;
-  color: var(--text-colour);
+  color: var(--primary-text-colour);
+  scroll-snap-type: mandatory;
+  scroll-snap-points-y: repeat(100vh);
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  overflow: auto;
 }
 
 a {

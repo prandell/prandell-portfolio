@@ -1,15 +1,27 @@
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
+import { GLTF, GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import * as THREE from 'three'
 import React, { Component } from 'react'
 
-class Octane extends Component {
+class ThreeOctane extends React.Component {
   async componentDidMount() {
     //Debug Console
     // const gui = new dat.GUI();
 
     //canvas
+    const canvasContainer = document.getElementById('canvas-container')
+    if (!canvasContainer) {
+      return
+    }
     const canvas = document.querySelector('canvas.webgl')
+    if (!canvas) {
+      console.log('no canvas')
+      return
+    }
+    const sizes = {
+      width: canvasContainer.clientWidth ?? 250,
+      height: canvasContainer.clientHeight ?? 250
+    }
 
     /* Scene Setup and Base configuration
       - Best settings were found by playing with debug console sliders
@@ -18,12 +30,17 @@ class Octane extends Component {
     // scene.background = new THREE.Color(0x000000, 0);
 
     //camera
-    const camera = new THREE.PerspectiveCamera(40, 1, 1, 2000)
+    const camera = new THREE.PerspectiveCamera(
+      50,
+      sizes.width / sizes.height,
+      1,
+      500
+    )
     camera.rotation.x = -2.7
     camera.rotation.y = 0.89
     camera.rotation.z = 2.8
     camera.position.x = 215
-    camera.position.y = 55
+    camera.position.y = 70
     camera.position.z = -159
     camera.zoom = 2
 
@@ -37,17 +54,20 @@ class Octane extends Component {
     renderer.shadowMap.enabled = true
     renderer.shadowMap.type = THREE.PCFSoftShadowMap
     renderer.outputEncoding = THREE.sRGBEncoding
-    renderer.setSize(window.innerWidth / 2, window.innerWidth / 2)
+    renderer.setSize(sizes.width, sizes.height)
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5))
+    camera.updateProjectionMatrix()
 
     // Orbital Controls
     const controls = new OrbitControls(camera, renderer.domElement)
     controls.minPolarAngle = Math.PI / 2.4
     controls.maxPolarAngle = Math.PI / 2.4
-    controls.minDistance = 260
-    controls.maxDistance = 260
+    controls.minDistance = 265
+    controls.maxDistance = 265
     controls.addEventListener('change', () => {
       renderer.render(scene, camera)
     })
+    controls.enableZoom = false
 
     //Plane
     const material = new THREE.MeshPhongMaterial({
@@ -85,37 +105,65 @@ class Octane extends Component {
 
     //Animation
     const clock = new THREE.Clock()
-    let car
-
-    const animate = () => {
+    let car: THREE.Object3D
+    let requestId: number | undefined
+    const animate = (): void => {
       const elapsedTime = clock.getElapsedTime()
-      car.rotation.z = 0.3 * elapsedTime
+      if (car) {
+        car.rotation.z = 0.3 * elapsedTime
+      }
       renderer.render(scene, camera)
-      requestAnimationFrame(animate)
+      requestId = requestAnimationFrame(animate)
     }
     const loader = new GLTFLoader()
 
     //Renderer/Resizing
-    const sizes = {
-      width: window.innerWidth,
-      height: window.innerHeight
-    }
     window.addEventListener('resize', () => {
       // Update sizes
-      sizes.width = window.innerWidth / 2
-      sizes.height = window.innerWidth / 2
+      sizes.width = canvasContainer.clientWidth
+      sizes.height = canvasContainer.clientHeight
 
       // Update camera
-      // camera.aspect = sizes.width / sizes.height;
-      // camera.updateProjectionMatrix();
+      camera.aspect = sizes.width / sizes.height
+      camera.updateProjectionMatrix()
 
       // Update renderer
       renderer.setSize(sizes.width, sizes.height)
       renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
     })
 
-    loader.load('octane/scene.gltf', function (gltf) {
-      gltf.scene.traverse(function (node) {
+    //Stop rendering when element is off screen
+    // start render
+    function start(): void {
+      animate()
+    }
+
+    // stop render
+    function stop(): void {
+      if (requestId) {
+        window.cancelAnimationFrame(requestId)
+      }
+      requestId = undefined
+    }
+
+    const onScreen = new Set()
+    const intersectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          onScreen.add(entry.target)
+          start()
+          console.log('render has been started')
+        } else {
+          onScreen.delete(entry.target)
+          stop()
+          console.log('render has been halted')
+        }
+      })
+    })
+
+    //Load model and start animation
+    loader.load('octane/scene.gltf', function (gltf: GLTF) {
+      gltf.scene.traverse(function (node: any) {
         if (node.isObject3D) {
           node.castShadow = true
           node.receiveShadow = true
@@ -124,12 +172,14 @@ class Octane extends Component {
 
       car = gltf.scene.children[0]
       car.scale.set(0.8, 0.8, 0.8)
-      const carPaint = car.children[0].children[0].children[0].children.find(
-        (o) => o.name == 'Octane_Octane_Body_0'
+      const carChildren: any = car.children[0]
+      const carPaint = carChildren.children[0].children[0].children.find(
+        (o: any) => o.name === 'Octane_Octane_Body_0'
+      ).material?.color
+      const carTrim = carChildren.children[0].children[0].children.find(
+        (o: any) => o.name === 'Octane_Paint_0'
       ).material.color
-      const carTrim = car.children[0].children[0].children[0].children.find(
-        (o) => o.name == 'Octane_Paint_0'
-      ).material.color
+
       carPaint.r = 0.07
       carPaint.g = 0.04
       carPaint.b = 0.19
@@ -138,13 +188,13 @@ class Octane extends Component {
       carTrim.b = 0.8
       scene.add(gltf.scene)
 
-      animate()
+      intersectionObserver.observe(canvas)
     })
   }
 
   render() {
-    return <canvas class="webgl"></canvas>
+    return <canvas className="webgl"></canvas>
   }
 }
 
-export default Octane
+export default ThreeOctane

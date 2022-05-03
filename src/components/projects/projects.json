@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Randell Comics",
+    "description": "Randell Comics is a scalable, responsive, modern Comic Book shop application built using React@18 + ReduxToolkit@1.8 + Typescript",
+    "github": "https://github.com/prandell/randell-comics",
+    "liveDemo": "https://unrivaled-naiad-04eaf8.netlify.app/"
+  },
+  {
+    "name": "Inhalert",
+    "description": "Inhalert is a Victorian air quality alert app, providing air quality summaries and allowing users to register to receive notifications when the air quality in their area is poor.",
+    "github": "https://github.com/prandell/Inhalert",
+    "liveDemo": "https://inhalert.herokuapp.com"
+  }
+]
