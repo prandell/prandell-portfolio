@@ -5,4 +5,6 @@ export const SideBarContainer = styled.div`
   flex-direction: column;
   grid-area: sidebar;
   justify-content: flex-end;
+  align-content: end;
+  margin-left: 10px;
 `

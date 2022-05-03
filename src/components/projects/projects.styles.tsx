@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const ProjectsPageContainer = styled.div`
-  padding: 20px 20px;
+  padding: 20px 20px 20px 0px;
   scroll-snap-align: start;
   height: 100vh;
   display: grid;
@@ -16,6 +16,8 @@ export const ProjectsPageContainer = styled.div`
     grid-area: sidebar;
   }
   .projects {
+    padding-top: 30px;
+    padding-left: 30px;
     grid-area: main;
   }
 `
@@ -24,6 +26,8 @@ export const TitleContainer = styled.div`
   grid-area: title;
   justify-self: start;
   align-self: start;
+  padding-top: 30px;
+  padding-left: 30px;
 
   h2 {
     margin: 20px 0px;

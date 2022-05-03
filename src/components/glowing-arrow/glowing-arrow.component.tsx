@@ -1,6 +1,5 @@
-import React, { FC } from 'react'
+import React, { FC, useEffect, useState } from 'react'
 import { scrollToElement } from '../../utils/scroll.utils'
-import Button from '../button/button.component'
 import * as Styled from './glowing-arrow.styles'
 
 type GlowingArrowProps = {
@@ -9,17 +8,14 @@ type GlowingArrowProps = {
   parentId: string
 }
 
-const getScrollHandler = (
+const getScrollElementId = (
   isDown: boolean,
   parentId: string
-): void | (() => void) => {
+): string | undefined => {
   const parentElement = document.getElementById(parentId)
-  const scrollElementId = isDown
+  return isDown
     ? parentElement?.nextElementSibling?.id
     : parentElement?.previousElementSibling?.id
-  if (scrollElementId) {
-    return () => scrollToElement(scrollElementId)
-  }
 }
 
 const GlowingArrow: FC<GlowingArrowProps> = ({
@@ -27,12 +23,20 @@ const GlowingArrow: FC<GlowingArrowProps> = ({
   isDown,
   isActive
 }) => {
+  const [scrollElementId, setScrollElementId] = useState<string>('')
   const arrow = isDown ? '&#10094' : '&#10095'
-  const handler = getScrollHandler(isDown, parentId) ?? (() => undefined)
+  useEffect(() => {
+    const scrollElementId = getScrollElementId(isDown, parentId)
+    if (scrollElementId) {
+      setScrollElementId(scrollElementId)
+    }
+  }, [isDown, parentId])
+
+  const scrollHandler = () => scrollToElement(scrollElementId)
   return (
     <Styled.GlowingArrowContainer>
       <Styled.GlowingArrow
-        onClick={handler}
+        onClick={scrollHandler}
         isActive={isActive}
         dangerouslySetInnerHTML={{ __html: arrow }}
       ></Styled.GlowingArrow>
