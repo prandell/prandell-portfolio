@@ -16,19 +16,19 @@ const Projects: FC = () => {
         hasDownArrow={true}
       />
       <Styled.TitleContainer>
-        <hr></hr>
-        <h2>Projects</h2>
-        <span>
+        <Styled.PageBreak />
+        <Styled.ProjectsTitle>Projects</Styled.ProjectsTitle>
+        <Styled.ProjectsBlurb>
           Most of my experience is in full-stack developement and platform
           engineering, however these are some isolated projects that showcase my
           progression as a developer.
-        </span>
+        </Styled.ProjectsBlurb>
       </Styled.TitleContainer>
-      <div className="projects">
+      <Styled.ProjectsContainer>
         {PROJECT_DATA.map((p) => (
-          <Project />
+          <Project key={p.name} project={p} />
         ))}
-      </div>
+      </Styled.ProjectsContainer>
       <div />
       <SkillsSphere />
     </Styled.ProjectsPageContainer>

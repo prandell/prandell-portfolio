@@ -35,7 +35,7 @@ body {
   background-color: var(--background-colour);
   margin: 0;
   color: var(--primary-text-colour);
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Titillium Web', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

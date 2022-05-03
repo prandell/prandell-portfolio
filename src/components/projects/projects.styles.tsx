@@ -15,38 +15,43 @@ export const ProjectsPageContainer = styled.div`
   .sidebar-container {
     grid-area: sidebar;
   }
-  .projects {
-    padding-top: 30px;
-    padding-left: 30px;
-    grid-area: main;
-  }
+`
+
+export const ProjectsContainer = styled.div`
+  padding-top: 5%;
+  padding-left: 10%;
+  grid-area: main;
 `
 
 export const TitleContainer = styled.div`
   grid-area: title;
   justify-self: start;
   align-self: start;
-  padding-top: 30px;
-  padding-left: 30px;
+  padding-top: 5%;
+  padding-left: 5%;
+  display: flex;
+  flex-direction: column;
+`
 
-  h2 {
-    margin: 20px 0px;
-  }
+export const ProjectsTitle = styled.span`
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 24px;
+`
 
-  hr {
-    margin-left: 0px;
-    background-color: var(--accent-colour-2);
-    border: 0 none;
-    color: var(--accent-colour-2);
-    width: 5%;
-    border-radius: 4px;
-    height: 7px;
-  }
+export const PageBreak = styled.hr`
+  margin-left: 0px;
+  background-color: var(--accent-colour-2);
+  border: 0 none;
+  color: var(--accent-colour-2);
+  width: 5%;
+  border-radius: 4px;
+  height: 7px;
+`
 
-  span {
-    margin-bottom: 0px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    font-size: 15px;
-  }
+export const ProjectsBlurb = styled.span`
+  margin-bottom: 0px;
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: bold;
+  font-size: 15px;
 `

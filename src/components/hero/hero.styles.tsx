@@ -16,9 +16,9 @@ export const HeroContainer = styled.div`
 export const HeroSubtitle = styled.span`
   grid-area: subtitle;
   align-self: end;
-  padding-left: 50px;
+  padding-left: 5%;
   font-family: 'Russo One', sans serif;
-  font-size: 30px;
+  font-size: 28px;
 `
 
 export const HeroOctaneContainer = styled.div`

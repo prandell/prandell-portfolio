@@ -35,7 +35,9 @@ import {
   siGraphql,
   siNginx,
   siDocker,
-  siGatling
+  siGatling,
+  siVuedotjs,
+  siVuetify
 } from 'simple-icons/icons'
 
 // Canvas options for icon cloud
@@ -50,6 +52,12 @@ const tagCanvasOptions: IOptions = {
   tooltipDelay: 0,
   wheelZoom: false
 }
+
+//change colour of black icons
+siThreedotjs.hex = '#fff'
+siPycharm.hex = '#21d087'
+siAmazonaws.hex = '#f79400'
+siApachekafka.hex = '#04a0d5'
 
 // Render icons to work with icon cloud API
 const icons = [
@@ -78,6 +86,8 @@ const icons = [
   siAzurepipelines,
   siCanva,
   siFigma,
+  siVuedotjs,
+  siVuetify,
   siNestjs,
   siAnsible,
   siElasticsearch,

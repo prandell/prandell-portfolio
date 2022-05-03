@@ -10,17 +10,17 @@ const NavigationBar: FC = () => {
   return (
     //Grid
     <Styled.NavigationBarContainer>
-      <span className="name">Pat Randell</span>
-      <div className="links-container">
-        <span className="projects" onClick={scrollToProjectsHandler}>
+      <Styled.NameTitle>Pat Randell</Styled.NameTitle>
+      <Styled.NavLinksContainer>
+        <Styled.NavLink onClick={scrollToProjectsHandler}>
           Projects
-        </span>
-        <span className="about" onClick={scrollToAboutHandler}>
+        </Styled.NavLink>
+        <Styled.NavLink>Experience</Styled.NavLink>
+        <Styled.NavLink className="about" onClick={scrollToAboutHandler}>
           About
-        </span>
-        <span className="github">Github</span>
+        </Styled.NavLink>
         <Button>Resume</Button>
-      </div>
+      </Styled.NavLinksContainer>
     </Styled.NavigationBarContainer>
   )
 }
