@@ -10,5 +10,6 @@ export const ButtonLink = styled.a`
   border: none;
   cursor: pointer;
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-around;
 `

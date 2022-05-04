@@ -6,23 +6,23 @@ const LandingTitles: FC = () => {
     //Grid
     <Styled.TitlesContainer>
       <Styled.SoftwareEngineer
-        alt="software engineer"
+        alt="Software Engineer"
         src="/SoftwareEngineer.png"
       ></Styled.SoftwareEngineer>
       <Styled.ComicCollector
-        alt="comic collector"
+        alt="Comic Collector"
         src="/ComicCollector.png"
       ></Styled.ComicCollector>
       <Styled.CodeCrusher
-        alt="code crusher"
+        alt="Code Crusher"
         src="/CodeCrusher.png"
       ></Styled.CodeCrusher>
       <Styled.Web3Surfer
-        alt="bounty hunter"
+        alt="Web3 Surfer"
         src="/Web3Surfer.png"
       ></Styled.Web3Surfer>
       <Styled.GrandChampion
-        alt="grand champion"
+        alt="Grand Champion"
         src="/GrandChampionTitle.png"
       ></Styled.GrandChampion>
     </Styled.TitlesContainer>

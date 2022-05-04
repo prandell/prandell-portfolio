@@ -18,9 +18,13 @@ export const ProjectsPageContainer = styled.div`
 `
 
 export const ProjectsContainer = styled.div`
-  padding-top: 5%;
+  padding-top: 0px;
   padding-left: 10%;
+  padding-bottom: 10%;
   grid-area: main;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 `
 
 export const TitleContainer = styled.div`

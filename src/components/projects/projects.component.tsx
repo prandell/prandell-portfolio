@@ -21,7 +21,8 @@ const Projects: FC = () => {
         <Styled.ProjectsBlurb>
           Most of my experience is in full-stack developement and platform
           engineering, however these are some isolated projects that showcase my
-          progression as a developer.
+          progression as a developer. Below is also a sphere containing most of
+          the technologies I have used or am familiar with.
         </Styled.ProjectsBlurb>
       </Styled.TitleContainer>
       <Styled.ProjectsContainer>

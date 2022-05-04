@@ -9,6 +9,7 @@ interface ProjectProps {
 
 const Project: FC<ProjectProps> = ({ project }: ProjectProps) => {
   const { name, description, github, liveDemo } = project
+
   return (
     //Grid
     <Styled.ProjectContainer>
@@ -16,6 +17,7 @@ const Project: FC<ProjectProps> = ({ project }: ProjectProps) => {
       <Styled.ProjectDescription>{description}</Styled.ProjectDescription>
       <Styled.LinksContainer>
         <ButtonLink target="_blank" href={github}>
+          <Styled.ButtonLinkIcon />
           Github
         </ButtonLink>
         <ButtonLink target="_blank" href={liveDemo}>
