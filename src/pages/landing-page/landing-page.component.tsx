@@ -4,7 +4,6 @@ import Hero from '../../components/hero/hero.component'
 import NavigationBar from '../../components/navigation-bar/navigation-bar.component'
 import Sidebar from '../../components/sidebar/sidebar.component'
 import * as Styled from './landing-page.styles'
-
 const LandingPage: FC = () => {
   return (
     //Grid

@@ -1,10 +1,10 @@
 import { GLTF, GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import * as THREE from 'three'
-import React, { Component } from 'react'
+import React, { FC, useEffect } from 'react'
 
-class ThreeOctane extends React.Component {
-  async componentDidMount() {
+const ThreeOctane: FC = () => {
+  useEffect(() => {
     //Debug Console
     // const gui = new dat.GUI();
 
@@ -190,11 +190,9 @@ class ThreeOctane extends React.Component {
 
       intersectionObserver.observe(canvas)
     })
-  }
+  })
 
-  render() {
-    return <canvas className="webgl"></canvas>
-  }
+  return <canvas className="webgl"></canvas>
 }
 
 export default ThreeOctane
