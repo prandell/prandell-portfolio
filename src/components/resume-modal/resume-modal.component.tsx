@@ -2,7 +2,6 @@ import React, { FC } from 'react'
 import ReactModal from 'react-modal'
 import { useRecoilState } from 'recoil'
 import { modalOpenState } from '../../recoil/modal/modal.atom'
-import Button from '../button/button.component'
 import * as Styled from './resume-modal.styles'
 import { ModalStyle } from './resume-modal.styles'
 

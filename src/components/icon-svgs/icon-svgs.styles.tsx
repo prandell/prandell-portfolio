@@ -1,4 +1,4 @@
-import styled, { StyledComponent } from 'styled-components'
+import styled from 'styled-components'
 import { ReactComponent as VueDotJs } from 'simple-icons/icons/vuedotjs.svg'
 import { ReactComponent as Docker } from 'simple-icons/icons/docker.svg'
 import { ReactComponent as Postgres } from 'simple-icons/icons/postgresql.svg'

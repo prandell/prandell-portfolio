@@ -8,7 +8,7 @@ interface ExperienceProps {
 }
 
 const Experience: FC<ExperienceProps> = ({ experience }: ExperienceProps) => {
-  const { name, description, title, division, logo, icons, time } = experience
+  const { name, description, title, logo, icons, time } = experience
 
   return (
     //Grid

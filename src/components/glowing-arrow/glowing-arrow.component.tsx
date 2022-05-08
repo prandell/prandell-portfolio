@@ -33,7 +33,7 @@ const GlowingArrow: FC<GlowingArrowProps> = ({
     if (scrollElementId) {
       setScrollElementId(scrollElementId)
     }
-  }, [isDown, parentId])
+  }, [isToTop, isDown, parentId])
 
   const scrollHandler = () => scrollToElement(scrollElementId)
   return (
