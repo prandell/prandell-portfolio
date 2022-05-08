@@ -10,6 +10,7 @@ export const GlowingArrowContainer = styled.h1`
   margin-bottom: 0%;
   font-family: 'Russo One', sans serif;
   font-size: 30px;
+  display: flex;
   color: var(--accent-colour-3);
   transform: rotate(-90deg);
   opacity: 0.4;

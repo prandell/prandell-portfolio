@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { ReactComponent as Github } from 'simple-icons/icons/github.svg'
 
 export const ProjectContainer = styled.div`
   width: 90%;
@@ -43,9 +42,4 @@ export const LinksContainer = styled.div`
     margin-right: 5px;
     margin-left: 0px;
   }
-`
-
-export const ButtonLinkIcon = styled(Github)`
-  height: 70%;
-  align-self: center;
 `

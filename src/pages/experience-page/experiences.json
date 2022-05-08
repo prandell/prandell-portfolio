@@ -1,0 +1,36 @@
+[
+  {
+    "name": "Deloitte Australia",
+    "logo": "deloitte-logo.webp",
+    "description": "Working as a full-stack developer on the Deloitte Illuminate asset - An application that uses data and graph algorithms to provide insights into global supply chains. Due to a small team size, I have become intimately familiar with the end-to-end development and delivery of application features, and was responsible for their outcomes.",
+    "title": "Graduate Consultant",
+    "division": "Product & Platform Engineering",
+    "time": "Mar 2021 - Present",
+    "icons": [
+      "azuredevops",
+      "elasticsearch",
+      "postgres",
+      "vuejs",
+      "typescript",
+      "docker",
+      "nestjs",
+      "postman"
+    ]
+  },
+  {
+    "name": "ANZ",
+    "logo": "anz-logo.png",
+    "description": "Worked on a full-stack project predominantly in Python. Integrated a backend Apache Kafka messaging system utilising Apache Avro payloads and Confluent Schema Registry. Customised an API generator to automate schema generation.",
+    "title": "Intern",
+    "time": "Nov 2019 - Feb 2020",
+    "icons": ["python", "kafka", "bamboo", "artifactory"]
+  },
+  {
+    "name": "ThoughtWorks",
+    "logo": "thoughtworks-logo.png",
+    "description": "An unpaid series of workshops and conferences that tought, and allowed us to practice technology consulting skills. Topics ranged from test-driven development, continuous delivery, pair programming, Agile and project management.",
+    "title": "Software Engineer",
+    "time": "Aug 2019 - Dec 2019",
+    "icons": ["nodejs", "javascript", "github", "junit"]
+  }
+]

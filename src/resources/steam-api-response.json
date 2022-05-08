@@ -1,0 +1,15 @@
+{
+  "total_count": 1,
+  "games": [
+    {
+      "appid": 252950,
+      "name": "Rocket League",
+      "playtime_2weeks": 21,
+      "playtime_forever": 37451,
+      "img_icon_url": "9ad6dd3d173523354385955b5fb2af87639c4163",
+      "playtime_windows_forever": 37273,
+      "playtime_mac_forever": 0,
+      "playtime_linux_forever": 0
+    }
+  ]
+}

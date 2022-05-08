@@ -1,12 +1,12 @@
 import React, { FC } from 'react'
 import { PROJECTS_PAGE_ID } from '../../utils/scroll.utils'
-import Sidebar from '../sidebar/sidebar.component'
-import SkillsSphere from '../skills-sphere/skills-sphere.component'
-import * as Styled from './projects.styles'
+import Sidebar from '../../components/sidebar/sidebar.component'
+import SkillsSphere from '../../components/skills-sphere/skills-sphere.component'
+import * as Styled from './projects-page.styles'
 import PROJECT_DATA from './projects.json'
-import Project from '../project/project.component'
+import Project from '../../components/project/project.component'
 
-const Projects: FC = () => {
+const ProjectsPage: FC = () => {
   return (
     //Grid
     <Styled.ProjectsPageContainer id={PROJECTS_PAGE_ID}>
@@ -14,6 +14,7 @@ const Projects: FC = () => {
         parentId={PROJECTS_PAGE_ID}
         hasUpArrow={true}
         hasDownArrow={true}
+        hasScrollToTop={false}
       />
       <Styled.TitleContainer>
         <Styled.PageBreak />
@@ -21,8 +22,7 @@ const Projects: FC = () => {
         <Styled.ProjectsBlurb>
           Most of my experience is in full-stack developement and platform
           engineering, however these are some isolated projects that showcase my
-          progression as a developer. Below is also a sphere containing most of
-          the technologies I have used or am familiar with.
+          progression as a developer.
         </Styled.ProjectsBlurb>
       </Styled.TitleContainer>
       <Styled.ProjectsContainer>
@@ -36,4 +36,4 @@ const Projects: FC = () => {
   )
 }
 
-export default Projects
+export default ProjectsPage

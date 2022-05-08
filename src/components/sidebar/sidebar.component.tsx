@@ -6,14 +6,36 @@ import * as Styled from './sidebar.styles'
 type SidebarProps = {
   hasDownArrow: boolean
   hasUpArrow: boolean
+  hasScrollToTop: boolean
   parentId: string
 }
 
-const Sidebar: FC<SidebarProps> = ({ hasDownArrow, hasUpArrow, parentId }) => {
+const Sidebar: FC<SidebarProps> = ({
+  hasDownArrow,
+  hasUpArrow,
+  hasScrollToTop,
+  parentId
+}) => {
   return (
     <Styled.SideBarContainer>
-      <GlowingArrow parentId={parentId} isActive={hasUpArrow} isDown={false} />
-      <GlowingArrow parentId={parentId} isActive={hasDownArrow} isDown={true} />
+      <GlowingArrow
+        parentId={parentId}
+        isActive={hasScrollToTop}
+        isToTop={true}
+        isDown={false}
+      />
+      <GlowingArrow
+        parentId={parentId}
+        isActive={hasUpArrow}
+        isToTop={false}
+        isDown={false}
+      />
+      <GlowingArrow
+        parentId={parentId}
+        isActive={hasDownArrow}
+        isToTop={false}
+        isDown={true}
+      />
     </Styled.SideBarContainer>
   )
 }

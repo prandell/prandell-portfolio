@@ -1,6 +1,7 @@
 import React, { FC } from 'react'
 import { IProject } from '../../models/project.models'
 import ButtonLink from '../button-link/button-link.component'
+import { GithubIconLink } from '../icon-svgs/icon-svgs.styles'
 import * as Styled from './project.styles'
 
 interface ProjectProps {
@@ -17,7 +18,7 @@ const Project: FC<ProjectProps> = ({ project }: ProjectProps) => {
       <Styled.ProjectDescription>{description}</Styled.ProjectDescription>
       <Styled.LinksContainer>
         <ButtonLink target="_blank" href={github}>
-          <Styled.ButtonLinkIcon />
+          <GithubIconLink />
           Github
         </ButtonLink>
         <ButtonLink target="_blank" href={liveDemo}>
