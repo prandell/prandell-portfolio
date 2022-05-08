@@ -67,7 +67,6 @@ export const getLatestSteamGameAsync = selector({
       .then((result: any) => {
         // Read result of the Cloud Function.
         const data: SteamApiResponse = result.data
-        console.log('asyncresult', result)
         return data
       })
       .catch((error) => {
@@ -78,7 +77,6 @@ export const getLatestSteamGameAsync = selector({
         )
       })
     if (response) {
-      console.log(response)
       return handleSteamApiResponse(response)
     }
   }

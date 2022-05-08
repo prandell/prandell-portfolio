@@ -14,7 +14,6 @@ const AboutPage: FC = () => {
   const steamGame = useRecoilValue(getLatestSteamGameAsync)
   const setSteamGame = useSetRecoilState(steamGameState)
   useEffect(() => {
-    console.log(steamGame)
     if (steamGame) setSteamGame(steamGame)
   }, [steamGame, setSteamGame])
   return (
