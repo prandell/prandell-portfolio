@@ -14,7 +14,12 @@ exports.getRecentGames = functions.https.onRequest((request, response) => {
           const achievementsUrl = `https://api.steampowered.com/ISteamUserStats/GetPlayerAchievements/v1/?steamid=${process.env.REACT_APP_STEAM_USER_ID}&appid=${data.response.games[0].appid}&key=${process.env.REACT_APP_STEAM_API_KEY}`
           const achievementsResponse = await axios.get(achievementsUrl)
           const achievements = achievementsResponse.data
-          return response.send({ data, achievements })
+          console.log({
+            data: { recentgames: data.response, achievements }
+          })
+          return response.send({
+            data: { recentgames: data.response, achievements }
+          })
         }
         return response.send({ data })
       })

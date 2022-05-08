@@ -4,7 +4,13 @@ This is my personal portfolio, which showcases my projects and experiences. It i
 
 ## General Information
 
-I borrowed conepts from XYZ
+> <b>The website can be seen live at [here!](https://prandell-portfolio.web.app/)</b>
+
+![alt-text](https://github.com/prandell/prandell-portfolio/blob/main/resources/screen-shot.png)
+
+It was deployed using Firebase, and utilises firebase storage and functions.
+
+You can find the designs for the website on Figma [here](www.google.com)
 
 ## Table of Contents
 
@@ -19,15 +25,21 @@ I borrowed conepts from XYZ
 
 ## Technology Used
 
-Notable technologies are `React@18`, `Recoil`, `ThreeJs`, `Typescript`, `StyledComponents@5`
+Notable technologies are `React@18`, `Recoil`, `ThreeJs`, `Firebase`, `Typescript`, `StyledComponents@5`
 
-- `react`: ^18.0.0
+- `react`: ^18.1.0
+- `three`: ^0.139.2
+- `recoil`: ^0.7.2
+- `simple-icons`: ^6.20.0
 - `typescript`: ^4.6.3
-- `react-dom`: ^18.0.0
-- `redux-logger`: ^3.0.6
-- `web-vitals`: ^2.1.4
+- `react-scroll`: ^1.8.7
+- `react-modal`: ^3.15.1
+- `react-dom`: ^18.1.0
 - `styled-components`: ^5.3.5
-- `react-scripts`: 5.0.0
+- `react-icon-cloud`: ^4.1.2
+- `react-scripts`: 5.0.1
+- `web-vitals`: ^2.1.4
+- `@emailjs/browser`: ^3.6.2
 - `@types/node`: ^16.11.26
 - `@types/react`: ^18.0.5
 - `@types/react-dom`: ^18.0.1
@@ -44,7 +56,7 @@ You must have node installed!
 ### Run
 
 ```bash
-cd ./personal-portfolio
+cd ./prandell-portfolio
 npm install
 npm run start
 ```
@@ -54,7 +66,7 @@ This will then launch the application within the native web browser on your comp
 ### Build
 
 ```bash
-cd ./personal-portfolio
+cd ./prandell-portfolio
 
 npm install
 npm run build
