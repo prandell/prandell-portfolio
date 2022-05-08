@@ -1,72 +1,17 @@
-import React, { FC, useEffect, useState } from 'react'
+import React, { FC } from 'react'
 import * as Styled from './steam-tracker.styles'
-import STEAM_DATA from '../../resources/steam-api-response.json'
-import {
-  SteamAchievementResponse,
-  SteamApiResponse
-} from '../../models/steam-response.model'
-
-interface ISteamGame {
-  appId: number
-  name: string
-  playtime2Weeks: number
-  playtimeAllTime: number
-  bannerUrl: string
-  heroUrl: string
-  achievementCount: number
-  achievementTotal: number
-}
-
-const initialState: ISteamGame = {
-  appId: 0,
-  name: 'N/A',
-  playtime2Weeks: 0,
-  playtimeAllTime: 0,
-  bannerUrl: '',
-  heroUrl: '',
-  achievementCount: 0,
-  achievementTotal: 0
-}
+import { useRecoilValue } from 'recoil'
+import { ISteamGame, steamGameState } from '../../recoil/steam/steam.atom'
 
 const SteamTracker: FC = () => {
-  const [
-    {
-      name,
-      playtime2Weeks,
-      playtimeAllTime,
-      bannerUrl,
-      achievementCount,
-      achievementTotal
-    },
-    setGame
-  ] = useState<ISteamGame>(initialState)
-
-  useEffect(() => {
-    const steamResponse: SteamApiResponse = STEAM_DATA
-    if (steamResponse.data?.response?.total_count > 0) {
-      const games = steamResponse.data.response.games
-      if (games && games.length > 0) {
-        const recentGame = games[0]
-        const game: ISteamGame = {
-          appId: recentGame['appid'],
-          name: recentGame['name'],
-          playtime2Weeks: recentGame['playtime_2weeks'],
-          playtimeAllTime: recentGame['playtime_forever'],
-          bannerUrl: `https://cdn.cloudflare.steamstatic.com/steam/apps/${recentGame['appid']}/header.jpg`,
-          heroUrl: `https://cdn.cloudflare.steamstatic.com/steam/apps/${recentGame['appid']}/hero_capsule.jpg`,
-          achievementCount:
-            steamResponse.achievements.playerstats.achievements.reduce(
-              (total: number, achievement: SteamAchievementResponse) =>
-                total + achievement.achieved,
-              0
-            ),
-          achievementTotal:
-            steamResponse.achievements.playerstats.achievements.length
-        }
-        setGame(game)
-      }
-    }
-  }, [])
+  const {
+    name,
+    playtime2Weeks,
+    playtimeAllTime,
+    bannerUrl,
+    achievementCount,
+    achievementTotal
+  } = useRecoilValue<ISteamGame>(steamGameState)
 
   return (
     <Styled.SteamTrackerContainer>

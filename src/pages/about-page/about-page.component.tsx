@@ -1,11 +1,22 @@
-import React, { FC } from 'react'
+import React, { FC, useEffect } from 'react'
 import { ABOUT_PAGE_ID } from '../../utils/scroll.utils'
 import Sidebar from '../../components/sidebar/sidebar.component'
 import * as Styled from './about-page.styles'
 import ContactMeForm from '../../components/contact-me-form/contact-me-form.component'
 import SteamTracker from '../../components/steam-tracker/steam-tracker.component'
+import { useRecoilValue, useSetRecoilState } from 'recoil'
+import {
+  getLatestSteamGameAsync,
+  steamGameState
+} from '../../recoil/steam/steam.atom'
 
 const AboutPage: FC = () => {
+  const steamGame = useRecoilValue(getLatestSteamGameAsync)
+  const setSteamGame = useSetRecoilState(steamGameState)
+  useEffect(() => {
+    console.log(steamGame)
+    if (steamGame) setSteamGame(steamGame)
+  }, [steamGame, setSteamGame])
   return (
     <Styled.AboutPageContainer id={ABOUT_PAGE_ID}>
       <Sidebar

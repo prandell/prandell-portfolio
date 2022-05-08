@@ -15,17 +15,3 @@ const firebaseConfig: FirebaseOptions = {
 const firebaseApp: FirebaseApp = initializeApp(firebaseConfig)
 const functions = getFunctions(firebaseApp)
 export const getRecentGames = httpsCallable(functions, 'getRecentGames')
-// addMessage({ text: messageText })
-//   .then((result) => {
-//     // Read result of the Cloud Function.
-//     /** @type {any} */
-//     const data = result.data;
-//     const sanitizedMessage = data.text;
-//   })
-//   .catch((error) => {
-//     // Getting the Error details.
-//     const code = error.code;
-//     const message = error.message;
-//     const details = error.details;
-//     // ...
-//   });

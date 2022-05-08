@@ -1,5 +1,5 @@
 export interface SteamApiResponse {
-  data: { response: SteamRecentGamesReponse }
+  recentgames: SteamRecentGamesReponse
   achievements: SteamAchievementsResponse
 }
 

@@ -1,5 +1,4 @@
 import React, { FC } from 'react'
-import Button from '../button/button.component'
 import * as Styled from './animated-arrow.styles'
 
 type AnimatedArrowProps = {
