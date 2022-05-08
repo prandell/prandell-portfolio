@@ -15,7 +15,6 @@ const ThreeOctane: FC = () => {
     }
     const canvas = document.querySelector('canvas.webgl')
     if (!canvas) {
-      console.log('no canvas')
       return
     }
     const sizes = {
@@ -152,11 +151,9 @@ const ThreeOctane: FC = () => {
         if (entry.isIntersecting) {
           onScreen.add(entry.target)
           start()
-          console.log('render has been started')
         } else {
           onScreen.delete(entry.target)
           stop()
-          console.log('render has been halted')
         }
       })
     })

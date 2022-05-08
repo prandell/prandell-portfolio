@@ -23,7 +23,9 @@ const ResumeModal: FC = () => {
         <Styled.CloseButton onClick={onCloseModal}>Close</Styled.CloseButton>
         <Styled.ResumeReader
           title="resume"
-          src={require('../../resources/Patrick Randell - CV.pdf')}
+          src={
+            'https://storage.googleapis.com/prandell-portfolio.appspot.com/resume/Patrick Randell - CV.pdf'
+          }
         />
       </ReactModal>
     </div>

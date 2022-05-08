@@ -7,23 +7,23 @@ const LandingTitles: FC = () => {
     <Styled.TitlesContainer>
       <Styled.SoftwareEngineer
         alt="Software Engineer"
-        src="/SoftwareEngineer.png"
+        src="https://storage.googleapis.com/prandell-portfolio.appspot.com/landing-titles/SoftwareEngineer.png"
       ></Styled.SoftwareEngineer>
       <Styled.ComicCollector
         alt="Comic Collector"
-        src="/ComicCollector.png"
+        src="https://storage.googleapis.com/prandell-portfolio.appspot.com/landing-titles/ComicCollector.png"
       ></Styled.ComicCollector>
       <Styled.CodeCrusher
         alt="Code Crusher"
-        src="/CodeCrusher.png"
+        src="https://storage.googleapis.com/prandell-portfolio.appspot.com/landing-titles/CodeCrusher.png"
       ></Styled.CodeCrusher>
       <Styled.Web3Surfer
         alt="Web3 Surfer"
-        src="/Web3Surfer.png"
+        src="https://storage.googleapis.com/prandell-portfolio.appspot.com/landing-titles/Web3Surfer.png"
       ></Styled.Web3Surfer>
       <Styled.GrandChampion
         alt="Grand Champion"
-        src="/GrandChampionTitle.png"
+        src="https://storage.googleapis.com/prandell-portfolio.appspot.com/landing-titles/GrandChampionTitle.png"
       ></Styled.GrandChampion>
     </Styled.TitlesContainer>
   )
