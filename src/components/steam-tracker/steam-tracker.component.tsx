@@ -70,7 +70,12 @@ const SteamTracker: FC = () => {
 
   return (
     <Styled.SteamTrackerContainer>
-      <Styled.PlayingNowTitle>Playing Now</Styled.PlayingNowTitle>
+      <Styled.PlayingNowTitle>
+        Playing Now
+        <Styled.LiveBlinkerList>
+          <Styled.LiveBlinker />
+        </Styled.LiveBlinkerList>
+      </Styled.PlayingNowTitle>
       <Styled.GameBanner src={bannerUrl} alt={name} />
       <Styled.GameStats>
         <Styled.GameStat>

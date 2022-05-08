@@ -14,12 +14,71 @@ export const SteamTrackerContainer = styled.div`
   h2 {
     margin: 10px 0;
   }
+
+  @keyframes pulse {
+    0% {
+      background: rgba(255, 255, 255, 0.3);
+      box-shadow: inset 0px 0px 10px 2px rgba(255, 0, 0, 0.5),
+        0px 0px 5px 2px rgba(255, 0, 0, 0.3);
+    }
+    100% {
+      background: rgba(255, 255, 255, 1);
+      box-shadow: inset 0px 0px 10px 2px rgba(255, 0, 0, 0.5),
+        0px 0px 15px 2px rgba(255, 0, 0, 1);
+    }
+  }
+
+  @-webkit-keyframes pulse {
+    0% {
+      background: rgba(255, 255, 255, 0.3);
+      box-shadow: inset 0px 0px 10px 2px rgba(255, 0, 0, 0.5),
+        0px 0px 5px 2px rgba(255, 0, 0, 0.3);
+    }
+    100% {
+      background: rgba(255, 255, 255, 1);
+      box-shadow: inset 0px 0px 10px 2px rgba(255, 0, 0, 0.5),
+        0px 0px 15px 2px rgba(255, 0, 0, 1);
+    }
+  }
+
+  @-moz-keyframes pulse {
+    0% {
+      background: rgba(255, 255, 255, 0.3);
+      box-shadow: inset 0px 0px 10px 2px rgba(255, 0, 0, 0.5),
+        0px 0px 5px 2px rgba(255, 0, 0, 0.3);
+    }
+    100% {
+      background: rgba(255, 255, 255, 1);
+      box-shadow: inset 0px 0px 10px 2px rgba(255, 0, 0, 0.5),
+        0px 0px 15px 2px rgba(255, 0, 0, 1);
+    }
+  }
+`
+
+export const LiveBlinkerList = styled.ul`
+  display: inline-flex;
+  padding-left: 20px;
+  margin: 0px;
+`
+
+export const LiveBlinker = styled.li`
+  display: block;
+  float: left;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: inset 0px 0px 10px 2px rgba(255, 0, 0, 0.5),
+    0px 0px 10px 2px rgba(255, 0, 0, 0.3);
+  -webkit-animation: pulse 1s alternate infinite;
+  -moz-animation: pulse 1s alternate infinite;
+  animation: pulse 1s alternate infinite;
 `
 
 export const PlayingNowTitle = styled.span`
   margin-top: 10px;
   font-size: 18px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 `
 export const GameBanner = styled.img`
   border: solid;
