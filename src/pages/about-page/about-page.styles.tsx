@@ -11,6 +11,9 @@ export const AboutPageContainer = styled.div`
   grid-template-areas:
     'sidebar title '
     'sidebar about';
+  @media screen and (max-width: 800px) {
+    height: 92vh;
+  }
 `
 
 export const AboutContainer = styled.div`

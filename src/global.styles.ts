@@ -44,11 +44,18 @@ body {
   height: 100vh;
   background-color: var(--background-colour);
   color: var(--primary-text-colour);
+}
+
+#page-container {
+  height: 100vh;
   scroll-snap-type: mandatory;
   scroll-snap-points-y: repeat(100vh);
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
   overflow: auto;
+  @media screen and (max-width: 800px) {
+    height: 92vh;
+  }
 }
 
 a {

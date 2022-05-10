@@ -13,7 +13,7 @@ const Experience: FC<ExperienceProps> = ({ experience }: ExperienceProps) => {
   return (
     //Grid
     <Styled.ExperienceContainer key={name}>
-      <Styled.OrgLogo src={logo} alt="name" />
+      <Styled.OrgLogo url={logo} src={logo} alt="name" />
       <Styled.DescriptionContainer>
         <Styled.ExperienceTitle>
           <Styled.OrgName>{name}</Styled.OrgName>

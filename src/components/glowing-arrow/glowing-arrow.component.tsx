@@ -1,12 +1,17 @@
 import React, { FC, useEffect, useState } from 'react'
-import { HOME_PAGE_ID, scrollToElement } from '../../utils/scroll.utils'
+import {
+  HOME_PAGE_ID,
+  scrollToElement,
+  scrollByAmount
+} from '../../utils/scroll.utils'
 import * as Styled from './glowing-arrow.styles'
 
 type GlowingArrowProps = {
   isDown: boolean
   isActive: boolean
   isToTop: boolean
-  parentId: string
+  parentId?: string
+  scrollAmount?: number
 }
 
 const getScrollElementId = (
@@ -23,19 +28,28 @@ const GlowingArrow: FC<GlowingArrowProps> = ({
   parentId,
   isDown,
   isToTop,
-  isActive
+  isActive,
+  scrollAmount
 }) => {
   const [scrollElementId, setScrollElementId] = useState<string>('')
+  const [containerScrollAmount, setContainerScrollAmount] = useState<number>(0)
   const arrow = isDown ? '&#10094' : '&#10095'
   useEffect(() => {
     if (isToTop) return setScrollElementId(HOME_PAGE_ID)
-    const scrollElementId = getScrollElementId(isDown, parentId)
-    if (scrollElementId) {
-      setScrollElementId(scrollElementId)
+    if (parentId) {
+      const scrollElId = getScrollElementId(isDown, parentId)
+      if (scrollElId) {
+        setScrollElementId(scrollElId)
+      }
+    } else if (scrollAmount) {
+      setContainerScrollAmount(scrollAmount)
     }
-  }, [isToTop, isDown, parentId])
+  }, [isToTop, isDown, parentId, scrollAmount])
 
-  const scrollHandler = () => scrollToElement(scrollElementId)
+  const scrollHandler = () => {
+    if (scrollAmount) scrollByAmount(containerScrollAmount)
+    else scrollToElement(scrollElementId)
+  }
   return (
     <Styled.GlowingArrowContainer>
       <Styled.GlowingArrow

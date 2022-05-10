@@ -7,4 +7,7 @@ export const SideBarContainer = styled.div`
   justify-content: flex-end;
   align-content: end;
   margin-left: 10px;
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
 `

@@ -11,18 +11,21 @@ export const ExperiencePageContainer = styled.div`
   grid-template-areas:
     'sidebar title '
     'sidebar experiences';
+  @media screen and (max-width: 800px) {
+    height: 92vh;
+  }
 `
 
 export const ExperiencesContainer = styled.div`
-  padding-top: 2.5%;
+  padding-top: 0;
   padding-left: 5%;
   padding-bottom: 2.5%;
   grid-area: experiences;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: start;
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 800px), (max-height: 650px) {
     scroll-snap-type: x mandatory;
     height: 100%;
     overflow-y: hidden;

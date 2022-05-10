@@ -15,6 +15,9 @@ export const ProjectsPageContainer = styled.div`
   .sidebar-container {
     grid-area: sidebar;
   }
+  @media screen and (max-width: 800px) {
+    height: 92vh;
+  }
 `
 
 export const ProjectsContainer = styled.div`
