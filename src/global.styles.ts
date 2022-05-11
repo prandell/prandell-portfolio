@@ -55,6 +55,7 @@ body {
   overflow: auto;
   @media screen and (max-width: 800px) {
     height: 92vh;
+    scroll-snap-points-y: repeat(92vh);
   }
 }
 

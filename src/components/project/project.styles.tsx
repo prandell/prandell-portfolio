@@ -6,6 +6,14 @@ export const ProjectContainer = styled.div`
   margin-top: 5px;
   display: flex;
   flex-direction: column;
+  @media screen and (max-width: 800px) {
+    height: unset;
+    margin-top: 0px;
+    margin-bottom: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
 `
 
 export const ProjectTitle = styled.span`
@@ -14,6 +22,9 @@ export const ProjectTitle = styled.span`
   font-size: 18px;
   color: var(--accent-colour-2);
   padding-bottom: 10px;
+  @media screen and (max-width: 800px) {
+    font-size: 30px;
+  }
 `
 
 export const ProjectDescription = styled.span`
@@ -21,6 +32,9 @@ export const ProjectDescription = styled.span`
   font-size: 15px;
   font-weight: bold;
   padding-bottom: 15px;
+  @media screen and (max-width: 800px) {
+    font-size: 20px;
+  }
 `
 
 export const LinksContainer = styled.div`
@@ -41,5 +55,17 @@ export const LinksContainer = styled.div`
   > *:first-child {
     margin-right: 5px;
     margin-left: 0px;
+  }
+
+  @media screen and (max-width: 800px) {
+    justify-content: center;
+    a {
+      min-width: 140px;
+      width: 40%;
+      font-size: 20px;
+      justify-content: space-evenly;
+      height: 50px;
+      line-height: 50px;
+    }
   }
 `

@@ -35,7 +35,7 @@ const AboutPage: FC = () => {
         </Styled.AboutBlurb>
       </Styled.TitleContainer>
       <Styled.AboutContainer>
-        <ContactMeForm></ContactMeForm>
+        <ContactMeForm />
         <SteamTracker />
       </Styled.AboutContainer>
     </Styled.AboutPageContainer>

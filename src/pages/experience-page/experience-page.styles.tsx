@@ -13,6 +13,12 @@ export const ExperiencePageContainer = styled.div`
     'sidebar experiences';
   @media screen and (max-width: 800px) {
     height: 92vh;
+    padding: 10px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 4fr;
+    grid-template-areas:
+      'title '
+      'experiences';
   }
 `
 
@@ -27,10 +33,11 @@ export const ExperiencesContainer = styled.div`
 
   @media screen and (max-width: 800px), (max-height: 650px) {
     scroll-snap-type: x mandatory;
-    height: 100%;
+    height: 95%;
     overflow-y: hidden;
     overflow-x: auto;
     margin: 0 auto;
+    margin-top: 10px;
     display: grid;
     grid-auto-flow: column;
     width: 90%;
@@ -53,6 +60,9 @@ export const ExperienceTitle = styled.span`
   margin-top: 10px;
   margin-bottom: 10px;
   font-size: 24px;
+  @media screen and (max-width: 800px) {
+    font-size: 30px;
+  }
 `
 
 export const PageBreak = styled.hr`
@@ -62,6 +72,7 @@ export const PageBreak = styled.hr`
   color: var(--accent-colour-2);
   width: 5%;
   border-radius: 4px;
+  min-width: 40px;
   height: 7px;
 `
 
@@ -70,4 +81,7 @@ export const ExperienceBlurb = styled.span`
   font-family: 'Titillium Web', sans-serif;
   font-weight: bold;
   font-size: 15px;
+  @media screen and (max-width: 800px) {
+    font-size: 18px;
+  }
 `

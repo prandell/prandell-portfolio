@@ -12,10 +12,10 @@ export const ExperienceContainer = styled.div`
   grid-template-areas: 'logo organisation';
 
   @media screen and (max-width: 800px), (max-height: 650px) {
-    width: 70vw;
+    width: 80vw;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.2fr 2fr;
-    grid-template-areas: 'logo' 'organisation';
+    grid-template-rows: 1fr;
+    grid-template-areas: 'organisation';
     scroll-snap-align: start;
   }
 `
@@ -61,6 +61,7 @@ export const OrgLogo = styled.img<OrgLogoProps>`
   align-self: center;
   width: 70%;
   @media screen and (max-width: 800px), (max-height: 650px) {
+    display: none;
     height: 5vh;
     width: 25vw;
     object-fit: contain;
@@ -74,7 +75,7 @@ export const ExperienceDescription = styled.span`
   font-size: 13px;
   font-weight: bold;
   @media screen and (max-width: 800px), (max-height: 650px) {
-    font-size: 16px;
+    font-size: 18px;
   }
 `
 
