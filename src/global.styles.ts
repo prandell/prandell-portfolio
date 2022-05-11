@@ -34,6 +34,7 @@ html,
 body {
   background-color: var(--background-colour);
   margin: 0;
+  overflow-y: hidden;
   color: var(--primary-text-colour);
   font-family: 'Titillium Web', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -44,6 +45,9 @@ body {
   height: 100vh;
   background-color: var(--background-colour);
   color: var(--primary-text-colour);
+  @media screen and (max-width: 800px) {
+    overflow-y: hidden;
+  }
 }
 
 #page-container {
@@ -54,8 +58,10 @@ body {
   scroll-behavior: smooth;
   overflow: auto;
   @media screen and (max-width: 800px) {
-    height: 92vh;
-    scroll-snap-points-y: repeat(92vh);
+    scroll-snap-type: unset;
+    scroll-snap-points-y: unset;
+    scroll-behavior: smooth;
+    overflow: auto;
   }
 }
 

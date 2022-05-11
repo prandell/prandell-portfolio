@@ -9,7 +9,7 @@ export const ProjectContainer = styled.div`
   @media screen and (max-width: 800px) {
     height: unset;
     margin-top: 0px;
-    margin-bottom: 60px;
+    margin-bottom: 0px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -23,7 +23,7 @@ export const ProjectTitle = styled.span`
   color: var(--accent-colour-2);
   padding-bottom: 10px;
   @media screen and (max-width: 800px) {
-    font-size: 30px;
+    font-size: 26px;
   }
 `
 
@@ -33,7 +33,7 @@ export const ProjectDescription = styled.span`
   font-weight: bold;
   padding-bottom: 15px;
   @media screen and (max-width: 800px) {
-    font-size: 20px;
+    font-size: 18px;
   }
 `
 
@@ -62,7 +62,7 @@ export const LinksContainer = styled.div`
     a {
       min-width: 140px;
       width: 40%;
-      font-size: 20px;
+      font-size: 18px;
       justify-content: space-evenly;
       height: 50px;
       line-height: 50px;

@@ -13,9 +13,8 @@ export const AboutPageContainer = styled.div`
     'sidebar about';
   @media screen and (max-width: 800px) {
     scroll-snap-align: unset;
-    height: 92vh;
     padding: 10px;
-    height: 184vh;
+    height: 200vh;
     grid-template-columns: 1fr;
     grid-template-rows: 0.5fr 1.5fr 2fr;
     grid-template-areas:

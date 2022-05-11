@@ -5,7 +5,6 @@ import '@szhsin/react-menu/dist/theme-dark.css'
 import '@szhsin/react-menu/dist/transitions/slide.css'
 
 export const NavigationMenuContainer = styled.div`
-  grid-area: header;
   display: none;
   width: 100%;
   padding: 15px;
@@ -19,6 +18,7 @@ export const NavigationMenuContainer = styled.div`
   }
 `
 export const NameTitle = styled.span`
+  cursor: pointer;
   color: var(--accent-colour-2);
 `
 
@@ -40,6 +40,7 @@ export const ArrowContainer = styled.div`
   border-radius: 5px;
   width: 40px;
   height: 100px;
+  z-index: 1000;
   display: grid;
   flex-direction: column;
   justify-content: center;

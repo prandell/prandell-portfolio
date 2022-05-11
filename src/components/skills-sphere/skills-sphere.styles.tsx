@@ -11,8 +11,7 @@ export const SkillsSphere = styled.div`
     width: 80%;
   }
   @media screen and (max-width: 800px) {
-    align-self: start;
-    margin-top: 50px;
+    align-self: center;
     height: 70%;
     width: unset;
     * {

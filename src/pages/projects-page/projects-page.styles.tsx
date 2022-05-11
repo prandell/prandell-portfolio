@@ -15,7 +15,7 @@ export const ProjectsPageContainer = styled.div`
   @media screen and (max-width: 800px) {
     scroll-snap-align: unset;
     padding: 10px;
-    height: 184vh;
+    height: 200vh;
     grid-template-columns: 1fr;
     grid-template-rows: 0.5fr 1.5fr 2fr;
     grid-template-areas:
@@ -35,7 +35,7 @@ export const ProjectsContainer = styled.div`
   justify-content: space-evenly;
   @media screen and (max-width: 800px) {
     scroll-snap-align: start;
-    justify-content: start;
+    justify-content: space-around;
     padding: 10px;
     padding-top: 20px;
   }
@@ -81,6 +81,6 @@ export const ProjectsBlurb = styled.span`
   font-weight: bold;
   font-size: 15px;
   @media screen and (max-width: 800px) {
-    font-size: 20px;
+    font-size: 18px;
   }
 `

@@ -12,13 +12,13 @@ export const ExperiencePageContainer = styled.div`
     'sidebar title '
     'sidebar experiences';
   @media screen and (max-width: 800px) {
-    height: 92vh;
+    height: unset;
     padding: 10px;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 4fr;
-    grid-template-areas:
-      'title '
-      'experiences';
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: unset;
+    grid-template-rows: unset;
+    grid-template-areas: unset;
   }
 `
 
@@ -33,9 +33,10 @@ export const ExperiencesContainer = styled.div`
 
   @media screen and (max-width: 800px), (max-height: 650px) {
     scroll-snap-type: x mandatory;
-    height: 95%;
-    overflow-y: hidden;
+    height: fit-content;
+    padding: 0px;
     overflow-x: auto;
+    overflow-y: hidden;
     margin: 0 auto;
     margin-top: 10px;
     display: grid;

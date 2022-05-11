@@ -21,7 +21,8 @@ export const HeroSubtitle = styled.span`
   font-family: 'Russo One', sans serif;
   font-size: 28px;
   @media (max-width: 800px) {
-    font-size: 28px;
+    align-self: center;
+    font-size: 24px;
   }
 `
 

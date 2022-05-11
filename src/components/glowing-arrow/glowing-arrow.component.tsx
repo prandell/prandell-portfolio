@@ -33,6 +33,7 @@ const GlowingArrow: FC<GlowingArrowProps> = ({
 }) => {
   const [scrollElementId, setScrollElementId] = useState<string>('')
   const [containerScrollAmount, setContainerScrollAmount] = useState<number>(0)
+  const [scrollIntervalId, setScrollIntervalId] = useState<any>(-1)
   const arrow = isDown ? '&#10094' : '&#10095'
   useEffect(() => {
     if (isToTop) return setScrollElementId(HOME_PAGE_ID)
@@ -47,19 +48,41 @@ const GlowingArrow: FC<GlowingArrowProps> = ({
   }, [isToTop, isDown, parentId, scrollAmount])
 
   const scrollHandler = () => {
-    if (scrollAmount) scrollByAmount(containerScrollAmount)
-    else scrollToElement(scrollElementId)
+    if (scrollElementId) scrollToElement(scrollElementId)
+  }
+  const mouseDownHandler = () => {
+    if (scrollIntervalId === -1) {
+      setScrollIntervalId(
+        setInterval(() => {
+          scrollByAmount(containerScrollAmount)
+        }, 100)
+      )
+    }
+  }
+  const mouseUpHandler = () => {
+    if (scrollIntervalId !== -1) {
+      clearInterval(scrollIntervalId)
+      setScrollIntervalId(-1)
+    }
   }
   return (
     <Styled.GlowingArrowContainer>
       <Styled.GlowingArrow
         onClick={scrollHandler}
+        onTouchStart={mouseDownHandler}
+        onTouchEnd={mouseUpHandler}
+        onMouseDown={mouseDownHandler}
+        onMouseUp={mouseUpHandler}
         isActive={isActive}
         dangerouslySetInnerHTML={{ __html: arrow }}
       ></Styled.GlowingArrow>
       {isToTop ? (
         <Styled.GlowingArrow
           onClick={scrollHandler}
+          onTouchStart={mouseDownHandler}
+          onTouchEnd={mouseUpHandler}
+          onMouseDown={mouseDownHandler}
+          onMouseUp={mouseUpHandler}
           isActive={isActive}
           dangerouslySetInnerHTML={{ __html: arrow }}
         ></Styled.GlowingArrow>

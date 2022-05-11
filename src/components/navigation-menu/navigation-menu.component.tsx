@@ -2,7 +2,9 @@ import React, { FC } from 'react'
 import { useSetRecoilState } from 'recoil'
 import { modalOpenState } from '../../recoil/modal/modal.atom'
 import {
+  HOME_PAGE_ID,
   scrollToAbout,
+  scrollToElement,
   scrollToExperience,
   scrollToProjects
 } from '../../utils/scroll.utils'
@@ -18,6 +20,7 @@ const NavigationMenu: FC = () => {
   const setModalOpen = useSetRecoilState(modalOpenState)
   const scrollToProjectsHandler = () => scrollToProjects(1)
   const scrollToExperienceHandler = () => scrollToExperience(2)
+  const scrollToTopHandler = () => scrollToElement(HOME_PAGE_ID)
   const scrollToAboutHandler = () => scrollToAbout(3)
 
   const onResumeClick = () => {
@@ -27,7 +30,9 @@ const NavigationMenu: FC = () => {
   return (
     <>
       <Styled.NavigationMenuContainer>
-        <Styled.NameTitle>Pat Randell</Styled.NameTitle>
+        <Styled.NameTitle onClick={scrollToTopHandler}>
+          Pat Randell
+        </Styled.NameTitle>
         <div>
           <Styled.NavMenu
             menuButton={
@@ -48,13 +53,13 @@ const NavigationMenu: FC = () => {
       </Styled.NavigationMenuContainer>
       <Styled.ArrowContainer>
         <GlowingArrow
-          scrollAmount={-1000}
+          scrollAmount={-100}
           isActive={true}
           isToTop={false}
           isDown={false}
         />
         <GlowingArrow
-          scrollAmount={1000}
+          scrollAmount={100}
           isActive={true}
           isToTop={false}
           isDown={true}

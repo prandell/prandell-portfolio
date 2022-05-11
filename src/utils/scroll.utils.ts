@@ -45,9 +45,9 @@ export const scrollToElement = (id: string) => {
 
 export const scrollByAmount = (amount: number) => {
   animateScroll.scrollMore(amount, {
-    duration: 500,
+    duration: 0,
     delay: 0,
-    smooth: 'easeInOutQuad',
+    smooth: 'linear',
     containerId: PAGE_CONTAINER_ID
   })
 }
