@@ -14,12 +14,14 @@ const ResumeModal: FC = () => {
 
   return (
     <div>
+      {modalOpen && (
+        <Styled.CloseButton onClick={onCloseModal}>Close</Styled.CloseButton>
+      )}
       <ReactModal
         isOpen={modalOpen}
         contentLabel="Minimal Modal"
         style={ModalStyle}
       >
-        <Styled.CloseButton onClick={onCloseModal}>Close</Styled.CloseButton>
         <Styled.ResumeReader
           title="resume"
           src={

@@ -16,6 +16,7 @@ import { ReactComponent as Javascript } from 'simple-icons/icons/javascript.svg'
 import { ReactComponent as Github } from 'simple-icons/icons/github.svg'
 import { ReactComponent as JUnit } from 'simple-icons/icons/junit5.svg'
 import { ReactComponent as LinkedIn } from 'simple-icons/icons/linkedin.svg'
+import { ReactComponent as MenuSvg } from './menu.svg'
 
 const VueJsIcon = styled(VueDotJs)`
   height: 20px;
@@ -131,6 +132,11 @@ export const LinkedInIconLink = styled(LinkedIn)`
   height: 70%;
   align-self: center;
   fill: white;
+`
+
+export const MenuIcon = styled(MenuSvg)`
+  width: 24px;
+  height: 24px;
 `
 
 export const IconDictionary: {

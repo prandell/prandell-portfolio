@@ -4,13 +4,13 @@ This is my personal portfolio, which showcases my projects and experiences. It i
 
 ## General Information
 
-> <b>The website can be seen live at [here!](https://prandell-portfolio.web.app/)</b>
+> <b>The website can be seen live at [prandell.app](https://prandell.app/)</b>
 
 ![alt-text](https://github.com/prandell/prandell-portfolio/blob/main/resources/screen-shot.png)
 
-It was deployed using Firebase, and utilises firebase storage and functions.
+It was deployed using Firebase, and utilises firebase storage and functions. The Steam web API is also used to show my most recently played game!
 
-You can find the designs for the website on Figma [here](www.google.com)
+You can find the designs for the website on Figma [here](https://www.figma.com/file/QtvZ9zthdgHsrgV7segTIA/Prandell-Portfolio?node-id=0%3A1)
 
 ## Table of Contents
 
@@ -33,6 +33,7 @@ Notable technologies are `React@18`, `Recoil`, `ThreeJs`, `Firebase`, `Typescrip
 - `simple-icons`: ^6.20.0
 - `typescript`: ^4.6.3
 - `react-scroll`: ^1.8.7
+- `@szhsin/react-menu`: ^3.0.1
 - `react-modal`: ^3.15.1
 - `react-dom`: ^18.1.0
 - `styled-components`: ^5.3.5
@@ -74,6 +75,8 @@ npm run build
 
 ## Acknowledgements
 
+- 3D Octane model by [Jako on Sketchfab](https://sketchfab.com/fairlight51)
+- FontMeme for all the title generation
 - [CSS Grid Guide](https://css-tricks.com/snippets/css/complete-guide-grid/)
 - [Create React App](https://github.com/facebook/create-react-app).
 - [Recoil](https://recoiljs.org/)

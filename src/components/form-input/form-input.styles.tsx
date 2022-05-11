@@ -1,10 +1,13 @@
 import styled, { css } from 'styled-components'
 
 const shrinkLabelStyles = css`
-  top: -18px;
+  top: -26px;
   left: 0px;
   font-size: 12px;
   color: var(--accent-colour-2);
+  @media screen and (max-width: 800px) {
+    font-size: 16px;
+  }
 `
 
 interface FormInputProps {
@@ -21,6 +24,9 @@ export const FormInputLabel = styled.label<FormInputProps>`
   left: 5px;
   top: 10px;
   transition: 300ms ease all;
+  @media screen and (max-width: 800px) {
+    font-size: 18px;
+  }
 
   ${({ shrink }: FormInputProps) => shrink && shrinkLabelStyles}
 `
@@ -38,6 +44,10 @@ export const FormInputMain = styled.input`
   border-radius: 0;
   border-bottom: 1px solid var(--accent-colour-3);
   margin: 5px 0;
+
+  @media screen and (max-width: 800px) {
+    font-size: 18px;
+  }
 
   &:focus {
     outline: none;
@@ -61,6 +71,9 @@ export const FormInputArea = styled.textarea`
   border-radius: 0;
   border-bottom: 1px solid var(--accent-colour-3);
   margin: 5px 0;
+  @media screen and (max-width: 800px) {
+    font-size: 18px;
+  }
 
   &:focus {
     outline: none;
@@ -74,4 +87,7 @@ export const FormInputArea = styled.textarea`
 export const FormInputGroup = styled.div`
   position: relative;
   margin: 25px 0;
+  @media screen and (max-width: 800px) {
+    margin: 40px 0;
+  }
 `

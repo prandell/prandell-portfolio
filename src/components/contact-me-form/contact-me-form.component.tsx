@@ -61,6 +61,7 @@ const ContactMeForm: FC = () => {
 
   return (
     <Styled.ContactMeContainer>
+      <Styled.PageBreak />
       <Styled.FormTitle>Contact Me</Styled.FormTitle>
       <Styled.ContactMeForm onSubmit={handleSubmit}>
         <FormInput

@@ -11,8 +11,11 @@ export const SteamTrackerContainer = styled.div`
   margin-right: 20px;
   width: 42%;
 
-  h2 {
-    margin: 10px 0;
+  @media screen and (max-width: 800px) {
+    margin: 10px auto;
+    width: 90%;
+    height: 100%;
+    grid-area: about;
   }
 
   @keyframes pulse {
@@ -79,11 +82,24 @@ export const PlayingNowTitle = styled.span`
   margin-top: 10px;
   font-size: 18px;
   margin-bottom: 25px;
+  @media screen and (max-width: 800px) {
+    font-size: 24px;
+    margin-top 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 `
 export const GameBanner = styled.img`
   border: solid;
   border-color: var(--accent-colour-3);
   width: 80%;
+  @media screen and (max-width: 800px) {
+    width: 90%;
+    max-height: 40%;
+    object-fit: contain;
+    border: none;
+    margin: 0px auto;
+  }
 `
 
 export const GameStats = styled.span`
@@ -95,6 +111,12 @@ export const GameStats = styled.span`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @media screen and (max-width: 800px) {
+    width: 90%;
+    margin: 0px auto;
+    margin-top: 10px;
+    font-size: 18px;
+  }
 `
 
 export const GameStat = styled.span`

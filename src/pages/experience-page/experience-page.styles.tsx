@@ -11,23 +11,34 @@ export const ExperiencePageContainer = styled.div`
   grid-template-areas:
     'sidebar title '
     'sidebar experiences';
+  @media screen and (max-width: 800px) {
+    height: unset;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: unset;
+    grid-template-rows: unset;
+    grid-template-areas: unset;
+  }
 `
 
 export const ExperiencesContainer = styled.div`
-  padding-top: 2.5%;
+  padding-top: 0;
   padding-left: 5%;
   padding-bottom: 2.5%;
   grid-area: experiences;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: start;
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 800px), (max-height: 650px) {
     scroll-snap-type: x mandatory;
-    height: 100%;
-    overflow-y: hidden;
+    height: fit-content;
+    padding: 0px;
     overflow-x: auto;
+    overflow-y: hidden;
     margin: 0 auto;
+    margin-top: 10px;
     display: grid;
     grid-auto-flow: column;
     width: 90%;
@@ -50,6 +61,9 @@ export const ExperienceTitle = styled.span`
   margin-top: 10px;
   margin-bottom: 10px;
   font-size: 24px;
+  @media screen and (max-width: 800px) {
+    font-size: 30px;
+  }
 `
 
 export const PageBreak = styled.hr`
@@ -59,6 +73,7 @@ export const PageBreak = styled.hr`
   color: var(--accent-colour-2);
   width: 5%;
   border-radius: 4px;
+  min-width: 40px;
   height: 7px;
 `
 
@@ -67,4 +82,7 @@ export const ExperienceBlurb = styled.span`
   font-family: 'Titillium Web', sans-serif;
   font-weight: bold;
   font-size: 15px;
+  @media screen and (max-width: 800px) {
+    font-size: 18px;
+  }
 `

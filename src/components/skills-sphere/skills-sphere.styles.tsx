@@ -10,4 +10,12 @@ export const SkillsSphere = styled.div`
     margin: auto;
     width: 80%;
   }
+  @media screen and (max-width: 800px) {
+    align-self: center;
+    height: 70%;
+    width: unset;
+    * {
+      width: 90%;
+    }
+  }
 `

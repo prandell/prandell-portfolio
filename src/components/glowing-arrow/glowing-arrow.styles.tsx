@@ -21,9 +21,23 @@ export const GlowingArrowContainer = styled.h1`
       40px 0vw 200px #5f34c1;
     opacity: 1;
   }
+  @media screen and (max-width: 800px) {
+    &:hover {
+      text-shadow: none;
+      opacity: 0.4;
+    }
+    &:active {
+      text-shadow: 0px 0px 4px var(--accent-colour-3),
+        0px 0px 4px var(--accent-colour-3), 0px 0px 3px #5f34c1,
+        2px 3px 15px #5f34c1, 2px 0px 15px, 5px 0px 125px,
+        20px 0vw 200px #5f34c1, 40px 0vw 200px #5f34c1;
+      opacity: 1;
+    }
+  }
 `
 
 export const GlowingArrow = styled.span<ArrowProps>`
   cursor: pointer;
+  user-select: none;
   display: ${({ isActive }: ArrowProps) => (isActive ? `block` : `none`)};
 `

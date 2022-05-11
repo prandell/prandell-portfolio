@@ -3,11 +3,14 @@ import styled from 'styled-components'
 export const NavigationBarContainer = styled.div`
   grid-area: header;
   display: flex;
-  width: 100%;
+  width: 95%;
   justify-content: space-between;
   align-items: center;
   font-family: 'Russo One', sans serif;
   font-size: 22px;
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
 `
 export const NameTitle = styled.span`
   color: var(--accent-colour-2);

@@ -54,7 +54,7 @@ const ThreeOctane: FC = () => {
     renderer.shadowMap.type = THREE.PCFSoftShadowMap
     renderer.outputEncoding = THREE.sRGBEncoding
     renderer.setSize(sizes.width, sizes.height)
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5))
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
     camera.updateProjectionMatrix()
 
     // Orbital Controls

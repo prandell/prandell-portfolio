@@ -4,7 +4,19 @@ const numTitles = 5
 const eachDuration = 5
 const cycleDuration = numTitles * eachDuration
 
-export const SoftwareEngineer = styled.img`
+interface TitleProps {
+  url: string
+}
+
+export const SoftwareEngineer = styled.img<TitleProps>`
+  @media screen and (max-width: 800px) {
+    content: url(${({ url }: TitleProps) => url.replace(/.png/, 'Mobile.png')});
+    width: 70%;
+    bottom: 5px;
+  }
+  @media screen and (max-width: 500px) {
+    width: 90%;
+  }
   margin: auto;
   position: absolute;
   left: 0px;
@@ -22,7 +34,13 @@ export const SoftwareEngineer = styled.img`
   animation-duration: ${cycleDuration}s;
 `
 
-export const ComicCollector = styled.img`
+export const ComicCollector = styled.img<TitleProps>`
+  @media screen and (max-width: 800px) {
+    content: url(${({ url }: TitleProps) => url.replace(/.png/, 'Mobile.png')});
+  }
+  @media screen and (max-width: 500px) {
+    width: 80%;
+  }
   margin: auto;
   position: absolute;
   left: 0px;
@@ -40,7 +58,14 @@ export const ComicCollector = styled.img`
   animation-delay: -${2 * eachDuration}s;
 `
 
-export const CodeCrusher = styled.img`
+export const CodeCrusher = styled.img<TitleProps>`
+  @media screen and (max-width: 800px) {
+    content: url(${({ url }: TitleProps) => url.replace(/.png/, 'Mobile.png')});
+  }
+  @media screen and (max-width: 500px) {
+    width: 85%;
+    bottom: 0px;
+  }
   margin: auto;
   position: absolute;
   left: 0px;
@@ -58,7 +83,15 @@ export const CodeCrusher = styled.img`
   animation-delay: -${3 * eachDuration}s;
 `
 
-export const Web3Surfer = styled.img`
+export const Web3Surfer = styled.img<TitleProps>`
+  @media screen and (max-width: 800px) {
+    content: url(${({ url }: TitleProps) => url.replace(/.png/, 'Mobile.png')});
+    width: 58%;
+  }
+  @media screen and (max-width: 500px) {
+    width: 80%;
+    bottom: 0px;
+  }
   margin: auto;
   position: absolute;
   left: 0px;
@@ -75,7 +108,16 @@ export const Web3Surfer = styled.img`
   animation-duration: ${cycleDuration}s;
   animation-delay: -${4 * eachDuration}s;
 `
-export const GrandChampion = styled.img`
+export const GrandChampion = styled.img<TitleProps>`
+  @media screen and (max-width: 800px) {
+    content: url(${({ url }: TitleProps) => url.replace(/.png/, 'Mobile.png')});
+    width: 80%;
+    bottom: -10px;
+  }
+  @media screen and (max-width: 500px) {
+    width: 99%;
+    bottom: -5px;
+  }
   margin: auto;
   position: absolute;
   left: 0px;
@@ -96,6 +138,9 @@ export const GrandChampion = styled.img`
 export const TitlesContainer = styled.div`
   position: relative;
   height: 100%;
+  @media screen and (max-width: 800px) {
+    bottom: -10vw;
+  }
   @-webkit-keyframes fade {
     0% {
       opacity: 0;

@@ -11,6 +11,17 @@ export const AboutPageContainer = styled.div`
   grid-template-areas:
     'sidebar title '
     'sidebar about';
+  @media screen and (max-width: 800px) {
+    scroll-snap-align: unset;
+    padding: 10px;
+    height: 200vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 1.5fr 2fr;
+    grid-template-areas:
+      'title'
+      'about'
+      'contact';
+  }
 `
 
 export const AboutContainer = styled.div`
@@ -21,6 +32,10 @@ export const AboutContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  @media screen and (max-width: 800px) {
+    display: contents;
+    grid-area: unset;
+  }
 `
 
 export const TitleContainer = styled.div`
@@ -32,12 +47,19 @@ export const TitleContainer = styled.div`
   padding-right: 5%;
   display: flex;
   flex-direction: column;
+  @media screen and (max-width: 800px) {
+    scroll-snap-align: start;
+    height: 100%;
+  }
 `
 
 export const AboutTitle = styled.span`
   margin-top: 10px;
   margin-bottom: 10px;
   font-size: 24px;
+  @media screen and (max-width: 800px) {
+    font-size: 30px;
+  }
 `
 
 export const PageBreak = styled.hr`
@@ -47,6 +69,7 @@ export const PageBreak = styled.hr`
   color: var(--accent-colour-2);
   width: 5%;
   border-radius: 4px;
+  min-width: 40px;
   height: 7px;
 `
 
@@ -55,4 +78,7 @@ export const AboutBlurb = styled.span`
   font-family: 'Titillium Web', sans-serif;
   font-weight: bold;
   font-size: 15px;
+  @media screen and (max-width: 800px) {
+    font-size: 18px;
+  }
 `

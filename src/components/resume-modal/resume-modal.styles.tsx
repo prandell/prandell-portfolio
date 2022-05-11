@@ -36,6 +36,7 @@ export const CloseButton = styled(Button)`
   bottom: 10px;
   right: 10px;
   padding: 0px 15px;
+  z-index: 100;
   cursor: pointer;
   margin-left: 10px;
   font-family: 'Russo One', sans serif;
