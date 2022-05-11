@@ -75,6 +75,8 @@ npm run build
 
 ## Acknowledgements
 
+- 3D Octane model by [Jako on Sketchfab](https://sketchfab.com/fairlight51)
+- FontMeme for all the title generation
 - [CSS Grid Guide](https://css-tricks.com/snippets/css/complete-guide-grid/)
 - [Create React App](https://github.com/facebook/create-react-app).
 - [Recoil](https://recoiljs.org/)
