@@ -9,7 +9,7 @@ export const FadeCarousel = styled(Carousel)`
     height: 100%;
   }
 
-  .slider.animated {
+  .slider {
     height: 90%;
   }
 
@@ -18,6 +18,6 @@ export const FadeCarousel = styled(Carousel)`
   }
 
   .carousel .slider-wrapper {
-    height: 70vh;
+    height: 80vh;
   }
 `

@@ -9,20 +9,22 @@ export const ExperienceContainer = styled.div`
   border: solid;
   border-color: var(--accent-colour-1);
   grid-template-columns: 4fr 4fr;
-  grid-template-rows: 2fr 40px 40px 4fr;
+  grid-template-rows: 2fr 60px 60px 4fr;
   grid-template-areas:
     'logo logo'
     'titles date'
     'skills skills'
     'description description';
 
-  // @media screen and (max-width: 800px), (max-height: 650px) {
-  //   width: 80vw;
-  //   grid-template-columns: 1fr;
-  //   grid-template-rows: 1fr;
-  //   grid-template-areas: 'organisation';
-  //   scroll-snap-align: start;
-  // }
+  @media screen and (max-width: 800px), (max-height: 650px) {
+    grid-template-rows: 1fr 40px 40px 40px 4fr;
+    grid-template-areas:
+      'logo logo'
+      'titles titles'
+      'date date'
+      'skills skills'
+      'description description';
+  }
 `
 export const OrgName = styled.span`
   font-family: 'Russo One', sans serif;
@@ -49,11 +51,12 @@ export const TimePeriod = styled.span`
   align-items: center;
   margin-right: 20px;
   justify-content: end;
-  font-size: 14px;
+  font-size: 16px;
   color: var(--primary-text-colour);
   @media screen and (max-width: 800px), (max-height: 650px) {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 20px;
+    justify-content: start;
   }
 `
 
@@ -79,10 +82,22 @@ export const ExperienceDescription = styled.span`
   margin: 20px 0;
   text-align: left;
   font-family: 'Titillium Web', sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: bold;
+  .extra-description {
+    display: contents;
+  }
   @media screen and (max-width: 800px), (max-height: 650px) {
-    font-size: 18px;
+    font-size: 16px;
+    .extra-description {
+      display: none;
+    }
+  }
+`
+
+export const ExtraDescription = styled.span`
+  @media screen and (max-width: 800px), (max-height: 650px) {
+    display: none;
   }
 `
 
@@ -95,7 +110,7 @@ export const JobTitles = styled.span`
   background-color: var(--accent-colour-3);
   border-radius: 5px;
   font-family: 'Titillium Web', sans-serif;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: bold;
   @media screen and (max-width: 800px), (max-height: 650px) {
     font-size: 16px;
@@ -107,7 +122,7 @@ export const IconsContainer = styled.span`
   grid-area: skills;
   display: flex;
   svg {
-    height: 20px;
+    height: 30px;
     @media screen and (max-width: 800px), (max-height: 650px) {
       height: 25px;
     }

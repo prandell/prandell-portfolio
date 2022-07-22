@@ -2,8 +2,9 @@
   {
     "name": "Deloitte Australia",
     "logo": "https://storage.googleapis.com/prandell-portfolio.appspot.com/company-logos/deloitte-logo.webp",
-    "description": "Managing a team of two other FED's to deliver a brand new NextJs and React18 application that utilises Recoil for state management. The application delivers complex supply chain network filtering using a drag & drop design language, implemented with react-flow-renderer. Data is visualised in multiple forms using Mapbox and Ag Grid.",
+    "description": "Managing a team of two other FED's to deliver a brand new NextJs, React18 and Recoil application for the Deloitte Illuminate asset. The application allows users to filter complex supply chain networks using a drag & drop design language, implemented with <a href='https://reactflow.dev/' style='display:contents;color:var(--accent-colour-2);'>React Flow</a>. Data is visualised in multiple forms using <a href='https://www.ag-grid.com/' style='display:contents;color:var(--accent-colour-2);'>Ag Grid</a> and <a href='https://www.mapbox.com/' style='display:contents;color:var(--accent-colour-2);'>MapBox</a>.",
     "title": "Consultant",
+    "extra": "<p class='extra-description'>As part of this delivering this application, I am also responsible for the design and implementation of backend graph traversal algorithms used to filter supply chain networks, and API endpoints to facilitate filter queries.</p>",
     "division": "Product & Platform Engineering",
     "time": "June 2022 - Present",
     "icons": [
@@ -27,7 +28,7 @@
     "description": "Working as a full-stack developer on the Deloitte Illuminate asset - An application that uses data and graph algorithms to provide insights into global supply chains. Due to a small team size, I have become intimately familiar with the end-to-end development and delivery of application features, and was responsible for their outcomes.",
     "title": "Graduate Consultant",
     "division": "Product & Platform Engineering",
-    "time": "Mar 2021 - Present",
+    "time": "Mar 2021 - June 2022",
     "icons": [
       "azuredevops",
       "elasticsearch",

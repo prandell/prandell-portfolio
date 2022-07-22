@@ -8,7 +8,7 @@ interface ExperienceProps {
 }
 
 const CarouselItem: FC<ExperienceProps> = ({ experience }: ExperienceProps) => {
-  const { name, description, title, logo, icons, time } = experience
+  const { name, description, title, logo, icons, time, extra } = experience
 
   return (
     //Grid
@@ -21,7 +21,11 @@ const CarouselItem: FC<ExperienceProps> = ({ experience }: ExperienceProps) => {
       <Styled.IconsContainer>
         {icons ? icons.map((i) => IconDictionary[i]) : ''}
       </Styled.IconsContainer>
-      <Styled.ExperienceDescription>{description}</Styled.ExperienceDescription>
+      <Styled.ExperienceDescription
+        dangerouslySetInnerHTML={{
+          __html: extra ? `${description} <br/><br/> ${extra}` : description
+        }}
+      ></Styled.ExperienceDescription>
     </Styled.ExperienceContainer>
   )
 }
