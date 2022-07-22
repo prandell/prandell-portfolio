@@ -3,7 +3,6 @@ import { EXPERIENCE_PAGE_ID } from '../../utils/scroll.utils'
 import Sidebar from '../../components/sidebar/sidebar.component'
 import * as Styled from './experience-page.styles'
 import EXPERIENCE_DATA from './experiences.json'
-import Experience from '../../components/experience/experience.component'
 import { FadeCarousel } from '../../components/carousel/carousel.component'
 import CarouselItem from '../../components/carousel-item/carousel-item.component'
 
@@ -24,13 +23,11 @@ const ExperiencePage: FC = () => {
           to gain valuable experience with the following organisations.
         </Styled.ExperienceBlurb>
       </Styled.TitleContainer>
-      {/* <Styled.ExperiencesContainer> */}
       <FadeCarousel>
         {EXPERIENCE_DATA.map((e) => (
           <CarouselItem key={e.name} experience={e} />
         ))}
       </FadeCarousel>
-      {/* </Styled.ExperiencesContainer> */}
     </Styled.ExperiencePageContainer>
   )
 }
