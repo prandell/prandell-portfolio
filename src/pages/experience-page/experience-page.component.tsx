@@ -4,6 +4,8 @@ import Sidebar from '../../components/sidebar/sidebar.component'
 import * as Styled from './experience-page.styles'
 import EXPERIENCE_DATA from './experiences.json'
 import Experience from '../../components/experience/experience.component'
+import { FadeCarousel } from '../../components/carousel/carousel.component'
+import CarouselItem from '../../components/carousel-item/carousel-item.component'
 
 const ExperiencePage: FC = () => {
   return (
@@ -22,11 +24,13 @@ const ExperiencePage: FC = () => {
           to gain valuable experience with the following organisations.
         </Styled.ExperienceBlurb>
       </Styled.TitleContainer>
-      <Styled.ExperiencesContainer>
+      {/* <Styled.ExperiencesContainer> */}
+      <FadeCarousel>
         {EXPERIENCE_DATA.map((e) => (
-          <Experience key={e.name} experience={e} />
+          <CarouselItem key={e.name} experience={e} />
         ))}
-      </Styled.ExperiencesContainer>
+      </FadeCarousel>
+      {/* </Styled.ExperiencesContainer> */}
     </Styled.ExperiencePageContainer>
   )
 }

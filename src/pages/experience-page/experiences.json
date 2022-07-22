@@ -2,6 +2,28 @@
   {
     "name": "Deloitte Australia",
     "logo": "https://storage.googleapis.com/prandell-portfolio.appspot.com/company-logos/deloitte-logo.webp",
+    "description": "Managing a team of two other FED's to deliver a brand new NextJs and React18 application that utilises Recoil for state management. The application delivers complex supply chain network filtering using a drag & drop design language, implemented with react-flow-renderer. Data is visualised in multiple forms using Mapbox and Ag Grid.",
+    "title": "Consultant",
+    "division": "Product & Platform Engineering",
+    "time": "June 2022 - Present",
+    "icons": [
+      "azuredevops",
+      "elasticsearch",
+      "postgres",
+      "vuejs",
+      "typescript",
+      "docker",
+      "nestjs",
+      "postman",
+      "redux",
+      "react",
+      "mapbox",
+      "nextjs"
+    ]
+  },
+  {
+    "name": "Deloitte Australia",
+    "logo": "https://storage.googleapis.com/prandell-portfolio.appspot.com/company-logos/deloitte-logo.webp",
     "description": "Working as a full-stack developer on the Deloitte Illuminate asset - An application that uses data and graph algorithms to provide insights into global supply chains. Due to a small team size, I have become intimately familiar with the end-to-end development and delivery of application features, and was responsible for their outcomes.",
     "title": "Graduate Consultant",
     "division": "Product & Platform Engineering",

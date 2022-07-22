@@ -14,6 +14,10 @@ import { ReactComponent as Artifactory } from 'simple-icons/icons/jfrog.svg'
 import { ReactComponent as NodeJs } from 'simple-icons/icons/nodedotjs.svg'
 import { ReactComponent as Javascript } from 'simple-icons/icons/javascript.svg'
 import { ReactComponent as Github } from 'simple-icons/icons/github.svg'
+import { ReactComponent as React } from 'simple-icons/icons/react.svg'
+import { ReactComponent as NextJs } from 'simple-icons/icons/nextdotjs.svg'
+import { ReactComponent as Redux } from 'simple-icons/icons/redux.svg'
+import { ReactComponent as MapBox } from 'simple-icons/icons/mapbox.svg'
 import { ReactComponent as JUnit } from 'simple-icons/icons/junit5.svg'
 import { ReactComponent as LinkedIn } from 'simple-icons/icons/linkedin.svg'
 import { ReactComponent as MenuSvg } from './menu.svg'
@@ -24,6 +28,34 @@ const VueJsIcon = styled(VueDotJs)`
   align-self: center;
   fill: #50c08d;
 `
+const ReactIcon = styled(React)`
+  height: 20px;
+  padding: 0px 5px;
+  align-self: center;
+  fill: #5bcfed;
+`
+
+const NextJsIcon = styled(NextJs)`
+  height: 20px;
+  padding: 0px 5px;
+  align-self: center;
+  fill: #f2f2f2;
+`
+
+const ReduxIcon = styled(Redux)`
+  height: 20px;
+  padding: 0px 5px;
+  align-self: center;
+  fill: #7047b3;
+`
+
+const MapBoxIcon = styled(MapBox)`
+  height: 20px;
+  padding: 0px 5px;
+  align-self: center;
+  fill: #3e5fee;
+`
+
 const DockerIcon = styled(Docker)`
   height: 20px;
   padding: 0px 5px;
@@ -142,6 +174,10 @@ export const MenuIcon = styled(MenuSvg)`
 export const IconDictionary: {
   [key: string]: any
 } = {
+  react: <ReactIcon key="react" />,
+  nextjs: <NextJsIcon key="nextjs" />,
+  mapbox: <MapBoxIcon key="mapbox" />,
+  redux: <ReduxIcon key="redux" />,
   typescript: <TypescriptIcon key="typescript" />,
   nestjs: <NestJsIcon key="nestjs" />,
   postgres: <PostgresIcon key="postgres" />,
